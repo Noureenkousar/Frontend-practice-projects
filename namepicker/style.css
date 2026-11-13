@@ -1,0 +1,192 @@
+/* =================================
+   TROPICAL PARADISE GLASS THEME
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at 10% 15%, #fff0b3, transparent 35%),
+        radial-gradient(circle at 90% 85%, #a4e9df, transparent 40%),
+        linear-gradient(135deg, #e1fff1, #b8eee5, #fff0df);
+
+    color: #245b54;
+}
+
+/* Heading */
+h1 {
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+
+    color: #167c70;
+
+    text-shadow: 2px 3px 5px rgba(22,124,112,0.15);
+}
+
+/* Input box */
+#user-input {
+    width: 320px;
+    padding: 17px 20px;
+
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 18px;
+
+    outline: none;
+    color: #245b54;
+    font-size: 16px;
+
+    box-shadow: 0 8px 25px rgba(36,91,84,0.1);
+
+    transition: 0.3s;
+}
+
+#user-input::placeholder {
+    color: #80aaa1;
+}
+
+#user-input:focus {
+    border-color: #43c6ac;
+    box-shadow: 0 0 15px rgba(67,198,172,0.35);
+}
+
+/* Common button style */
+button {
+    padding: 15px 28px;
+    margin: 8px;
+
+    border: none;
+    border-radius: 14px;
+
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+/* Add Name button */
+button:nth-of-type(1) {
+    background: linear-gradient(135deg, #43c6ac, #83dfc5);
+    color: white;
+
+    box-shadow: 0 7px 18px rgba(67,198,172,0.3);
+}
+
+/* Pick Name button */
+button:nth-of-type(2) {
+    background: linear-gradient(135deg, #ff896b, #ffb36b);
+    color: white;
+
+    box-shadow: 0 7px 18px rgba(255,137,107,0.3);
+}
+
+button:hover {
+    transform: translateY(-5px) scale(1.04);
+    filter: brightness(1.06);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+/* Names list glass card */
+#display {
+    width: min(90%, 420px);
+    min-height: 65px;
+
+    padding: 22px;
+
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255,255,255,0.85);
+    border-radius: 22px;
+
+    color: #247c70;
+    font-size: 18px;
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px rgba(36,91,84,0.12),
+        inset 0 0 15px rgba(255,255,255,0.4);
+
+    overflow-wrap: anywhere;
+}
+
+/* Selected name card */
+#display-name {
+    min-width: 270px;
+    padding: 25px 35px;
+
+    background: rgba(255,255,255,0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    border: 2px solid rgba(255,255,255,0.9);
+    border-bottom: 5px solid #ff9878;
+    border-radius: 22px;
+
+    color: #ed795d;
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+
+    box-shadow: 0 12px 30px rgba(36,91,84,0.13);
+
+    animation: popIn 0.5s ease;
+}
+
+/* Selected name animation */
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Mobile responsive */
+@media(max-width: 500px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    #user-input {
+        width: 90%;
+    }
+
+    button {
+        padding: 13px 18px;
+    }
+
+    #display-name {
+        min-width: 220px;
+    }
+}
