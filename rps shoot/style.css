@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: linear-gradient(135deg, #667eea, #11c0e7);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -39,7 +39,7 @@ h1 {
 /* Buttons */
 button {
     background: white;
-    color: #764ba2;
+    color: #2cb2bc;
     border: none;
     padding: 15px 30px;
     margin: 10px;

@@ -1,0 +1,242 @@
+/* ===== CHERRY BLOSSOM TODO APP ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'Poppins', sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 15%, #ffdce5, transparent 35%),
+        radial-gradient(circle at 85% 85%, #ffe5cf, transparent 35%),
+        linear-gradient(135deg, #fff4f5, #fce8e8);
+
+    padding: 35px 20px;
+}
+
+/* ===== HEADING ===== */
+
+h1 {
+    font-size: 43px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #a83f60;
+
+    margin-bottom: 35px;
+
+    text-shadow: 2px 4px 15px rgba(168, 63, 96, 0.15);
+}
+
+/* ===== INPUT FIELD ===== */
+
+#user-input {
+    width: 320px;
+    padding: 17px 20px;
+
+    border: 2px solid #f3c5ce;
+    border-radius: 16px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    color: #773b50;
+    font-size: 15px;
+
+    box-shadow: 0 8px 25px rgba(160, 70, 100, 0.09);
+
+    transition: all 0.3s ease;
+}
+
+#user-input::placeholder {
+    color: #c99aa8;
+}
+
+#user-input:focus {
+    border-color: #d66b88;
+
+    box-shadow: 0 0 0 5px rgba(214, 107, 136, 0.13);
+
+    transform: translateY(-3px);
+}
+
+/* ===== ADD TASK BUTTON ===== */
+
+button {
+    margin-left: 10px;
+    padding: 17px 27px;
+
+    border: none;
+    border-radius: 16px;
+
+    background: linear-gradient(135deg, #c44d72, #ed8b91);
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(196, 77, 114, 0.23);
+
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-4px) scale(1.03);
+
+    background: linear-gradient(135deg, #a93860, #dc7185);
+
+    box-shadow: 0 12px 25px rgba(196, 77, 114, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* ===== TASK SCROLL AREA ===== */
+
+#display {
+    width: min(500px, 100%);
+
+    margin-top: 35px;
+    padding: 5px 12px 5px 5px;
+
+    list-style: none;
+
+    flex: 1;
+    min-height: 0;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin;
+    scrollbar-color: #d98298 transparent;
+}
+
+/* ===== TASK CARDS ===== */
+
+#display li {
+    padding: 19px 22px;
+    margin-bottom: 15px;
+
+    border-radius: 17px;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border: 1px solid rgba(230, 160, 175, 0.45);
+
+    backdrop-filter: blur(15px);
+
+    color: #804358;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    box-shadow: 0 8px 22px rgba(160, 70, 100, 0.09);
+
+    overflow-wrap: anywhere;
+
+    animation: blossom 0.4s ease;
+
+    transition: all 0.3s ease;
+}
+
+/* ===== TASK DECORATION ===== */
+
+#display li::before {
+    content: "✿";
+
+    display: inline-block;
+
+    margin-right: 13px;
+
+    color: #df7794;
+
+    font-size: 20px;
+}
+
+/* ===== HOVER EFFECT ===== */
+
+#display li:hover {
+    transform: translateX(7px);
+
+    background: rgba(255, 255, 255, 0.98);
+
+    border-color: #df8ba0;
+
+    box-shadow: 0 12px 28px rgba(196, 77, 114, 0.15);
+}
+
+/* ===== CUSTOM SCROLLBAR ===== */
+
+#display::-webkit-scrollbar {
+    width: 7px;
+}
+
+#display::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#display::-webkit-scrollbar-thumb {
+    background: #e6a0b2;
+    border-radius: 20px;
+}
+
+#display::-webkit-scrollbar-thumb:hover {
+    background: #c44d72;
+}
+
+/* ===== TASK ANIMATION ===== */
+
+@keyframes blossom {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 33px;
+        margin-bottom: 25px;
+    }
+
+    #user-input {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #display {
+        width: 100%;
+    }
+}

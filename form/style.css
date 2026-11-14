@@ -1,0 +1,175 @@
+/* ===== MINIMAL LUXURY LOGIN PAGE ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Poppins', Arial, sans-serif;
+
+    background: linear-gradient(135deg, #eeeeee, #dcdcdc);
+    padding: 20px;
+}
+
+/* Login Card */
+
+form {
+    width: 100%;
+    max-width: 390px;
+
+    padding: 45px 38px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.08),
+        0 3px 10px rgba(0, 0, 0, 0.03);
+
+    animation: appear 0.6s ease;
+}
+
+/* Heading */
+
+h1 {
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #171717;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 17px;
+
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #fafafa;
+
+    color: #222222;
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+/* Placeholder */
+
+input::placeholder {
+    color: #999999;
+}
+
+/* Input Focus */
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background: #ffffff;
+
+    border-color: #222222;
+
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+/* Error Message */
+
+#message {
+    color: #e00000;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-align: center;
+
+    min-height: 18px;
+}
+
+/* Login Button */
+
+input[type="submit"] {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+/* Button Hover */
+
+input[type="submit"]:hover {
+    background: #383838;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Click */
+
+input[type="submit"]:active {
+    transform: scale(0.97);
+}
+
+/* Card Animation */
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 450px) {
+    form {
+        padding: 35px 23px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
